@@ -76,6 +76,6 @@ todoRoutes.route('/delete/:id').delete((req, res) => {
 })
 app.use('/todos', todoRoutes);
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT||PORT, () => {
     console.log("Server is running on port " + PORT);
 });
